@@ -8,12 +8,12 @@ Unlike typical Android recovery screens that are purely text-based, hidden behin
 
 ## Features
 
-- **Custom ROM Flashing:** A straightforward interface for browsing and installing custom operating systems without needing a PC or command-line tools.
-- **Coreboot Integration:** A simulated flow for replacing the proprietary stock firmware/bootloader with `coreboot`, giving users full control over the lowest levels of their hardware.
-- **Permanent Rooting:** A one-click rooting solution built directly into the recovery, automatically backing up the `pre-root` state.
-- **Homebrew & RAM Booting:** A "Homebrew" loader that allows booting alternative payloads (like DOOM) entirely in volatile RAM from external media, complete with docking support (Video, Serial, USB HID).
-- **Interactive Shell:** A built-in terminal emulator to run recovery commands (like `ls`, `mount`, `getprop`, and `fastboot` variables) directly on the device.
-- **Hardware Button Navigation:** Full support for standard recovery navigation. Use the Volume Up / Volume Down keys (mapped to `ArrowUp` and `ArrowDown` on a keyboard) to move the focus, and the Power button (mapped to `Enter`) to select, or navigate entirely by touch.
+- Custom ROM Flashing: A straightforward interface for browsing and installing custom operating systems without needing a PC or command-line tools.
+- Coreboot Integration: A simulated flow for replacing the proprietary stock firmware/bootloader with `coreboot`, giving users full control over the lowest levels of their hardware.
+- Permanent Rooting: A one-click rooting solution built directly into the recovery, automatically backing up the `pre-root` state.
+- Homebrew & RAM Booting: A "Homebrew" loader that allows booting alternative payloads (like DOOM) entirely in volatile RAM from external media, complete with docking support (Video, Serial, USB HID).
+- Interactive Shell: A built-in terminal emulator to run recovery commands (like `ls`, `mount`, `getprop`, and `fastboot` variables) directly on the device.
+- Hardware Button Navigation: Full support for standard recovery navigation. Use the Volume Up / Volume Down keys (mapped to `ArrowUp` and `ArrowDown` on a keyboard) to move the focus, and the Power button (mapped to `Enter`) to select, or navigate entirely by touch.
 
 ## Why Fairphone?
 
@@ -23,9 +23,9 @@ The Fairphone is well-known for its modularity and repairability. This project e
 
 This is a web-based UI mockup built using HTML, CSS, and JavaScript. It does not actually flash any physical devices. 
 
-- **State Management:** Uses a custom router and UI component system.
-- **Input Handling:** Custom navigation logic allows seamless switching between pointer/touch input and hardware button navigation.
-- **Styling:** Custom CSS tailored to look like a modern, utilitarian recovery environment.
+- State Management: Uses a custom router and UI component system.
+- Input Handling: Custom navigation logic allows seamless switching between pointer/touch input and hardware button navigation.
+- Styling: Custom CSS tailored to look like a modern, utilitarian recovery environment.
 
 ### Running Locally
 

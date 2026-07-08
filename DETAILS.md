@@ -2,10 +2,10 @@
 
 ## Sources of Inspiration
 
-- **The User Interface:** The clean, comfortable, and readable UI is inspired by the **Microsoft Surface UEFI**. Traditional Android recoveries (like TWRP or stock recovery) often rely on tiny, high-contrast monospace text or utilitarian designs that feel intimidating. This concept brings the premium, PC-like UEFI experience to a mobile form factor.
-- **UEFI & Coreboot Concept:** The overarching idea of unlocking a true UEFI environment on the phone after flashing coreboot is inspired by **Tianocore EDK II**.
-- **MOK Manager:** The Machine Owner Key management section is directly inspired by the Linux MOK manager that can be installed on Surface devices to handle custom Secure Boot keys.
-- **The "Homebrew" Feature:** The core concept is inspired from console modding. The name "Homebrew" is inspired by **The Homebrew Channel**, a program that can be installed on the Nintendo Wii to run custom, unsigned code directly from an SD card.
+- The User Interface: The clean, comfortable, and readable UI is inspired by the Microsoft Surface UEFI. Traditional Android recoveries (like TWRP or stock recovery) often rely on tiny, high-contrast monospace text or utilitarian designs that feel intimidating. This concept brings the premium, PC-like UEFI experience to a mobile form factor.
+- UEFI & Coreboot Concept: The overarching idea of unlocking a true UEFI environment on the phone after flashing coreboot is inspired by Tianocore EDK II.
+- MOK Manager: The Machine Owner Key management section is directly inspired by the Linux MOK manager that can be installed on Surface devices to handle custom Secure Boot keys.
+- The "Homebrew" Feature: The core concept is inspired from console modding. The name "Homebrew" is inspired by The Homebrew Channel, a program that can be installed on the Nintendo Wii to run custom, unsigned code directly from an SD card.
 
 ---
 
@@ -77,6 +77,6 @@ void __attribute__((naked, section(".init"))) _start(recovery_handoff_t *handoff
 ```
 
 ### How it works:
-1. **No OS Overhead:** DOOM is running completely bare-metal in volatile RAM. There is no Android system, no background processes, and no filesystem access (other than the external USB drive).
-2. **Direct Rendering:** Because the recovery environment already initialized the smartphone's display panel (which requires complex MIPI-DSI initialization sequences), DOOM simply overwrites the memory addresses pointed to by `handoff->framebuffer`. The display controller automatically pushes those pixels to the screen.
-3. **Volatile:** The moment the phone is rebooted or loses power, the RAM is cleared, leaving the host smartphone completely untouched.
+1. No OS Overhead: DOOM is running completely bare-metal in volatile RAM. There is no Android system, no background processes, and no filesystem access (other than the external USB drive).
+2. Direct Rendering: Because the recovery environment already initialized the smartphone's display panel (which requires complex MIPI-DSI initialization sequences), DOOM simply overwrites the memory addresses pointed to by `handoff->framebuffer`. The display controller automatically pushes those pixels to the screen.
+3. Volatile: The moment the phone is rebooted or loses power, the RAM is cleared, leaving the host smartphone completely untouched.
