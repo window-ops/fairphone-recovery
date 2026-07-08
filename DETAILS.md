@@ -17,7 +17,7 @@ When the user clicks "Run from RAM", the recovery environment maps this binary i
 
 To allow the payload (like a port of DOOM) to display graphics without needing a complex Linux display driver, the recovery passes a "handoff structure". Because the minimal Cairo renderer cannot gracefully release the phone's built-in MIPI-DSI panel, this structure provides the physical address of an external monitor's framebuffer, negotiated via DisplayPort Alt-Mode on a connected USB-C dock.
 
-### Sample `autorun.hbf` Entry Point (C & ARM64 Assembly)
+### Sample `autorun.hbf` Entry Point
 
 Here is a conceptual example of what the entry point of the DOOM `autorun.hbf` payload might look like when compiled. It receives the hardware state from the recovery and starts drawing directly to the external screen.
 
