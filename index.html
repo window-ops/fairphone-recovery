@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Fairphone Recovery Setup</title>
+<link rel="stylesheet" href="css/tokens.css">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/frame.css">
+<link rel="stylesheet" href="css/components.css">
+<link rel="stylesheet" href="css/pages.css">
+</head>
+<body>
+
+<div class="stage" id="stage">
+
+  <aside class="stage-controls" id="stageControls">
+    <div class="stage-controls-group">
+      <span class="stage-controls-label">Device</span>
+      <div class="segmented" id="deviceSelect" role="radiogroup" aria-label="Device model">
+        <button type="button" data-device="fp4" role="radio">FP4</button>
+        <button type="button" data-device="fp5" role="radio" aria-checked="true">FP5</button>
+        <button type="button" data-device="fp6" role="radio">FP6</button>
+      </div>
+    </div>
+    <div class="stage-controls-group">
+      <span class="stage-controls-label">Display</span>
+      <div class="segmented" id="frameSelect" role="radiogroup" aria-label="Display mode">
+        <button type="button" data-frame="on" role="radio" aria-checked="true">Frame</button>
+        <button type="button" data-frame="off" role="radio">Screen only</button>
+      </div>
+    </div>
+    <p class="stage-controls-hint" id="stageHint"></p>
+  </aside>
+
+  <div class="device" id="device" data-frame="on">
+    <div class="device-buttons device-buttons-left" aria-hidden="false">
+      <button type="button" class="hw-btn hw-vol-up" id="hwVolUp" title="Volume up (move up)">
+        <span class="hw-glyph">+</span>
+      </button>
+      <button type="button" class="hw-btn hw-vol-down" id="hwVolDown" title="Volume down (move down)">
+        <span class="hw-glyph">-</span>
+      </button>
+    </div>
+    <div class="device-buttons device-buttons-right">
+      <button type="button" class="hw-btn hw-power" id="hwPower" title="Power (select)">
+        <span class="hw-glyph"></span>
+      </button>
+    </div>
+
+    <div class="device-screen" id="screen">
+      <div class="notch" aria-hidden="true"><span class="notch-cut"></span><span class="camera"></span></div>
+
+      <header class="statusbar" id="statusbar">
+        <span class="statusbar-left" id="statusClock">03:14</span>
+        <span class="statusbar-center">Recovery</span>
+        <span class="statusbar-right">
+          <span class="statusbar-mode" id="statusMode">fastbootd</span>
+          <span class="statusbar-batt" id="statusBatt">78%</span>
+        </span>
+      </header>
+
+      <div class="headerbar" id="headerbar">
+        <button type="button" class="headerbar-back" id="btnBack" hidden aria-label="Back">
+          <svg viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="M10 3 5 8l5 5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <h1 class="headerbar-title" id="headerTitle">Recovery Setup</h1>
+        <button type="button" class="headerbar-action" id="btnHeaderAction" hidden></button>
+      </div>
+
+      <main class="viewport" id="viewport" tabindex="-1"></main>
+
+      <div class="dialog-layer" id="dialogLayer" hidden></div>
+      <div class="toast-layer" id="toastLayer" aria-live="polite"></div>
+    </div>
+  </div>
+</div>
+
+<script type="module" src="js/app.js"></script>
+</body>
+</html>

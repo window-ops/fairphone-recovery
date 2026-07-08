@@ -1,0 +1,69 @@
+/* Design tokens. Adwaita dark palette blended with Material surface and button roles. */
+
+:root {
+  /* Adwaita dark window colors */
+  --bg: #1d1d20;
+  --bg-header: #161618;
+  --bg-status: #101012;
+  --surface: #26262a;
+  --surface-2: #2e2e33;
+  --surface-3: #37373d;
+
+  /* Material style state layers */
+  --state-hover: rgba(255, 255, 255, 0.06);
+  --state-press: rgba(255, 255, 255, 0.11);
+  --state-focus: rgba(53, 132, 228, 0.16);
+
+  --border: rgba(255, 255, 255, 0.09);
+  --border-strong: rgba(255, 255, 255, 0.16);
+
+  --text: #f2f2f4;
+  --text-dim: #a0a0a8;
+  --text-faint: #6f6f78;
+
+  /* Adwaita named accents */
+  --accent: #3584e4;
+  --accent-bright: #62a0ea;
+  --accent-on: #ffffff;
+  --destructive: #e01b24;
+  --destructive-bright: #f66151;
+  --warning: #e5a50a;
+  --warning-bright: #f8e45c;
+  --success: #2ec27e;
+  --purple: #9141ac;
+
+  --tonal-accent: rgba(53, 132, 228, 0.20);
+  --tonal-destructive: rgba(224, 27, 36, 0.18);
+  --tonal-warning: rgba(229, 165, 10, 0.16);
+
+  /* Type */
+  --font-sans: "Inter", "Cantarell", "Segoe UI", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", "Cascadia Code", "DejaVu Sans Mono", ui-monospace, monospace;
+
+  --fs-status: 12px;
+  --fs-caption: 12px;
+  --fs-body: 14px;
+  --fs-row: 15px;
+  --fs-title: 17px;
+  --fs-display: 22px;
+
+  /* Radii, Material leaning */
+  --r-sm: 8px;
+  --r-md: 12px;
+  --r-lg: 16px;
+  --r-pill: 999px;
+
+  /* Spacing scale */
+  --sp-1: 4px;
+  --sp-2: 8px;
+  --sp-3: 12px;
+  --sp-4: 16px;
+  --sp-5: 20px;
+  --sp-6: 24px;
+
+  --elev-1: 0 1px 2px rgba(0, 0, 0, 0.35);
+  --elev-2: 0 2px 8px rgba(0, 0, 0, 0.42);
+  --elev-3: 0 8px 24px rgba(0, 0, 0, 0.5);
+
+  --focus-ring: 0 0 0 2px var(--bg), 0 0 0 4px var(--accent);
+}
